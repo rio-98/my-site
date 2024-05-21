@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     background-color: #000; /* Ensuring the body background is black */
     color: #fff; /* Ensuring the default text color is white */
 }
@@ -89,7 +90,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url('Yellow-2.jpg'); /* Replace with your background image path */
+    background-image: url('path/to/your/image.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,6 +104,7 @@ body {
 .new-section-content {
     max-width: 100%;
     text-align: center; /* Center align text for better appearance on mobile */
+    padding: 20px;
 }
 
 .new-section-content h1 {
@@ -137,7 +139,7 @@ body {
 .about-me {
     text-align: center;
     padding: 50px;
-    background-image: url('White-1.jpg'); /* Replace with your background image path */
+    background-image: url('path/to/your/about-me-background.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -164,7 +166,7 @@ body {
 .services {
     text-align: center;
     padding: 50px;
-    background-image: url('White-1.jpg'); /* Replace with your background image path */
+    background-image: url('path/to/your/services-background.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -197,11 +199,13 @@ body {
 .guarantees-content {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping for mobile devices */
 }
 
 .guarantee {
     text-align: center;
     max-width: 300px;
+    margin: 20px; /* Add margin for spacing between guarantees on mobile */
 }
 
 .guarantee h3 {
@@ -255,10 +259,12 @@ footer .social-icon img:hover {
     .new-section {
         flex-direction: column;
         padding: 20px;
+        align-items: center; /* Center align items for better appearance on mobile */
     }
 
     .new-section-content {
         max-width: 100%;
+        text-align: center; /* Center align text for better appearance on mobile */
     }
 
     .about-me,
