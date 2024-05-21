@@ -2,80 +2,65 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
-    background-color: #000;
-    color: #fff;
+    background-color: #000; /* Ensuring the body background is black */
+    color: #fff; /* Ensuring the default text color is white */
 }
 
 .sidebar {
     width: 200px;
-    background-color: #fff;
-    color: #000;
+    background-color: #fff; /* White background for the sidebar */
+    color: #000; /* Black text for the sidebar */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    height: 100vh;
-    position: fixed;
-    z-index: 1000;
+    height: 100vh; /* Ensure the sidebar occupies the full height */
 }
 
-.logo img {
-    max-width: 100%;
+.sidebar .logo img {
+    max-width: 100%; /* Ensure the logo fits within the sidebar width */
     height: auto;
     margin-bottom: 30px;
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.menu {
+.sidebar .menu {
     list-style: none;
     padding: 0;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0; /* Ensure no default margins */
+    width: 100%; /* Ensure the menu takes the full width */
 }
 
-.menu li {
+.sidebar .menu li {
     margin-bottom: 20px;
-    width: 100%;
+    width: 100%; /* Ensure each list item takes the full width */
 }
 
-.menu li a {
-    color: #000;
+.sidebar .menu li a {
+    color: #000; /* Black text for menu items */
     text-decoration: none;
     font-size: 18px;
-    display: block;
-    padding: 10px;
-    text-align: center;
-    transition: background-color 0.3s;
+    display: block; /* Ensure the anchor takes the full width */
+    padding: 10px; /* Add some padding for better appearance */
+    text-align: center; /* Center align the text */
+    transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
-.menu li a:hover {
-    background-color: #f0f0f0;
+.sidebar .menu li a:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
 }
 
 .main-content {
     flex-grow: 1;
     padding: 50px;
-    background-color: #000;
-    color: #fff;
-    margin-left: 200px;
+    background-color: #000; /* Black background for the main content */
+    color: #fff; /* White text for the main content */
 }
 
 .hero {
     text-align: center;
     margin-bottom: 50px;
-    background-color: #000;
-    color: #fff;
+    background-color: #000; /* Black background for the hero section */
+    color: #fff; /* White text for the hero section */
     padding: 50px;
     border-radius: 5px;
 }
@@ -92,57 +77,219 @@ body {
 
 .hero .discover-more {
     font-size: 16px;
-    color: #000;
-    background-color: #fff;
+    color: #000; /* Black text for the button */
+    background-color: #fff; /* White background for the button */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
 }
 
-/* Responsive Styles */
+/* New Section */
+.new-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('Yellow-2.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    border-radius: 5px;
+    margin-top: 50px;
+    color: #fff; /* Default text color for new section */
+}
+
+.new-section-content {
+    max-width: 50%;
+}
+
+.new-section-content h1 {
+    font-size: 38px;
+    color: #000; /* Black text */
+    margin-bottom: 20px;
+}
+
+.new-section-content p {
+    font-size: 18px;
+    color: #fff; /* White text */
+    margin-bottom: 30px;
+    padding-left: 50px;
+}
+
+.new-section-content .cta-button {
+    font-size: 16px;
+    color: #fff; /* White text */
+    background-color: #000; /* Black background */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 50px; /* Add margin to move it to the right */
+}
+
+.new-section-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* About Me Section */
+.about-me {
+    text-align: center;
+    padding: 50px;
+    background-image: url('White-1.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000; /* Default text color for about me section */
+    border-radius: 10px;
+}
+
+.about-me img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.about-me h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 18px;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 50px;
+    background-image: url('White-1.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000; /* Default text color for services section */
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services p {
+    font-size: 18px;
+}
+
+/* Guarantees Section */
+.guarantees {
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+}
+
+.guarantees h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f4c042; /* Yellow text */
+}
+
+.guarantees-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.guarantee {
+    text-align: center;
+    max-width: 300px;
+}
+
+.guarantee h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f4c042; /* Yellow text */
+}
+
+.guarantee p {
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Social Media Icons */
+footer .social-media {
+    margin-bottom: 20px;
+}
+
+footer .social-icon img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Header */
+.mobile-header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+}
+
 @media (max-width: 768px) {
+    .mobile-header {
+        display: flex;
+    }
+
     .sidebar {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px;
-        position: static;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #000;
+        color: #fff;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        padding-top: 60px;
+    }
+
+    .sidebar.active {
+        left: 0;
     }
 
     .menu-toggle {
-        display: block;
-    }
-
-    .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background-color: #fff;
-    }
-
-    .menu-active .menu {
         display: flex;
     }
 
     .main-content {
         padding: 20px;
-        margin-left: 0;
-    }
-
-    .hero {
-        padding: 20px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
     }
 }
