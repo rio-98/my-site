@@ -97,10 +97,12 @@ body {
     border-radius: 5px;
     margin-top: 50px;
     color: #fff; /* Default text color for new section */
+    flex-wrap: wrap; /* Allow wrapping for mobile devices */
 }
 
 .new-section-content {
-    max-width: 50%;
+    max-width: 100%;
+    text-align: center; /* Center align text for better appearance on mobile */
 }
 
 .new-section-content h1 {
@@ -113,7 +115,7 @@ body {
     font-size: 18px;
     color: #fff; /* White text */
     margin-bottom: 30px;
-    padding-left: 50px;
+    padding-left: 0; /* Remove left padding for better appearance on mobile */
 }
 
 .new-section-content .cta-button {
@@ -123,7 +125,7 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    margin-left: 50px; /* Add margin to move it to the right */
+    margin-left: 0; /* Remove left margin for better appearance on mobile */
 }
 
 .new-section-image img {
@@ -234,4 +236,34 @@ footer .social-icon img {
 
 footer .social-icon img:hover {
     transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .new-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .new-section-content {
+        max-width: 100%;
+    }
+
+    .about-me,
+    .services,
+    .guarantees {
+        padding: 20px;
+    }
 }
