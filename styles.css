@@ -256,6 +256,18 @@ footer .social-icon img:hover {
         padding: 20px;
     }
 
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
     .new-section {
         flex-direction: column;
         padding: 20px;
@@ -267,9 +279,39 @@ footer .social-icon img:hover {
         text-align: center; /* Center align text for better appearance on mobile */
     }
 
+    .new-section-content h1 {
+        font-size: 28px;
+    }
+
+    .new-section-content p {
+        font-size: 16px;
+    }
+
     .about-me,
     .services,
     .guarantees {
         padding: 20px;
+    }
+
+    .about-me h2,
+    .services h2,
+    .guarantees h2 {
+        font-size: 28px;
+    }
+
+    .about-me p,
+    .services p,
+    .guarantees p {
+        font-size: 16px;
+    }
+
+    .guarantees-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guarantee {
+        max-width: 90%;
+        margin: 10px 0;
     }
 }
