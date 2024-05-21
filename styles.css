@@ -277,6 +277,7 @@ footer .social-icon img:hover {
     .menu li {
         margin-bottom: 0;
         margin-right: 10px;
+        width: auto; /* Make sure list items are auto width */
     }
 
     .menu-active .menu {
