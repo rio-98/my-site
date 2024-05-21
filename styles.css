@@ -15,7 +15,16 @@ body {
     align-items: center;
     padding: 20px;
     height: 100vh; /* Ensure the sidebar occupies the full height */
+	position: fixed;
+	top: 0;
+	left: -200px;
+	transition: left 0.3s ease-in-out;
 }
+
+.sidebar.active {
+	left: 0;
+}
+
 
 .sidebar .logo img {
     max-width: 100%; /* Ensure the logo fits within the sidebar width */
@@ -111,24 +120,17 @@ body {
 
 .new-section-content p {
     font-size: 18px;
-    color: #fff; /* White text */
+    color: #000; /* Black text */
     margin-bottom: 30px;
-    padding-left: 50px;
 }
 
-.new-section-content .cta-button {
-    font-size: 16px;
-    color: #fff; /* White text */
-    background-color: #000; /* Black background */
+.new-section-btn {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    margin-left: 50px; /* Add margin to move it to the right */
-}
-
-.new-section-image img {
-    max-width: 100%;
-    height: auto;
+    font-size: 16px;
 }
 
 /* About Me Section */
@@ -264,32 +266,22 @@ footer .social-icon img:hover {
 }
 
 @media (max-width: 768px) {
-    .mobile-header {
-        display: flex;
-    }
-
-    .sidebar {
+   .sidebar {
         position: fixed;
-        top: 0;
-        left: -250px;
-        width: 250px;
         height: 100%;
-        background-color: #000;
-        color: #fff;
-        transition: left 0.3s ease;
-        z-index: 1000;
-        padding-top: 60px;
-    }
-
-    .sidebar.active {
-        left: 0;
-    }
-
-    .menu-toggle {
-        display: flex;
+        z-index: 100;
     }
 
     .main-content {
         padding: 20px;
+    }
+
+    .new-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .new-section-content {
+        max-width: 100%;
     }
 }
