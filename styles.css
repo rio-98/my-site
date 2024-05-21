@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
     background-color: #000; /* Ensuring the body background is black */
     color: #fff; /* Ensuring the default text color is white */
 }
@@ -27,7 +26,7 @@ body {
 }
 
 .menu-toggle {
-    display: none;
+    display: none; /* Hide toggle button by default */
     background: none;
     border: none;
     font-size: 30px;
@@ -40,6 +39,9 @@ body {
     padding: 0;
     margin: 0; /* Ensure no default margins */
     width: 100%; /* Ensure the menu takes the full width */
+    display: flex;
+    flex-direction: column; /* Vertical layout by default */
+    align-items: center; /* Center align items */
 }
 
 .sidebar .menu li {
@@ -64,9 +66,9 @@ body {
 .main-content {
     flex-grow: 1;
     padding: 50px;
-    margin-left: 200px; /* Adjust for the fixed sidebar */
     background-color: #000; /* Black background for the main content */
     color: #fff; /* White text for the main content */
+    margin-left: 200px; /* Adjust for the fixed sidebar */
 }
 
 .hero {
@@ -102,7 +104,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url('path/to/your/image.jpg'); /* Replace with your background image path */
+    background-image: url('Yellow-2.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -110,13 +112,10 @@ body {
     border-radius: 5px;
     margin-top: 50px;
     color: #fff; /* Default text color for new section */
-    flex-wrap: wrap; /* Allow wrapping for mobile devices */
 }
 
 .new-section-content {
-    max-width: 100%;
-    text-align: center; /* Center align text for better appearance on mobile */
-    padding: 20px;
+    max-width: 50%;
 }
 
 .new-section-content h1 {
@@ -129,7 +128,7 @@ body {
     font-size: 18px;
     color: #fff; /* White text */
     margin-bottom: 30px;
-    padding-left: 0; /* Remove left padding for better appearance on mobile */
+    padding-left: 50px;
 }
 
 .new-section-content .cta-button {
@@ -139,7 +138,7 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    margin-left: 0; /* Remove left margin for better appearance on mobile */
+    margin-left: 50px; /* Add margin to move it to the right */
 }
 
 .new-section-image img {
@@ -151,7 +150,7 @@ body {
 .about-me {
     text-align: center;
     padding: 50px;
-    background-image: url('path/to/your/about-me-background.jpg'); /* Replace with your background image path */
+    background-image: url('White-1.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -178,7 +177,7 @@ body {
 .services {
     text-align: center;
     padding: 50px;
-    background-image: url('path/to/your/services-background.jpg'); /* Replace with your background image path */
+    background-image: url('White-1.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -211,13 +210,11 @@ body {
 .guarantees-content {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Allow wrapping for mobile devices */
 }
 
 .guarantee {
     text-align: center;
     max-width: 300px;
-    margin: 20px; /* Add margin for spacing between guarantees on mobile */
 }
 
 .guarantee h3 {
@@ -271,13 +268,15 @@ footer .social-icon img:hover {
 
     .menu {
         display: none;
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
+        justify-content: center;
         align-items: center;
     }
 
     .menu li {
-        margin-bottom: 10px;
+        margin-bottom: 0;
+        margin-right: 10px;
     }
 
     .menu-active .menu {
