@@ -90,7 +90,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url('path/to/your/image.jpg'); /* Replace with your background image path */
+    background-image: url('Yellow-2.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,7 +139,7 @@ body {
 .about-me {
     text-align: center;
     padding: 50px;
-    background-image: url('path/to/your/about-me-background.jpg'); /* Replace with your background image path */
+    background-image: url('White-1.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -166,7 +166,7 @@ body {
 .services {
     text-align: center;
     padding: 50px;
-    background-image: url('path/to/your/services-background.jpg'); /* Replace with your background image path */
+    background-image: url('White-1.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
