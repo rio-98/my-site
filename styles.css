@@ -16,12 +16,23 @@ body {
     align-items: center;
     padding: 20px;
     height: 100vh; /* Ensure the sidebar occupies the full height */
+    position: fixed;
+    z-index: 1000;
 }
 
 .sidebar .logo img {
     max-width: 100%; /* Ensure the logo fits within the sidebar width */
     height: auto;
     margin-bottom: 30px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .sidebar .menu {
@@ -53,6 +64,7 @@ body {
 .main-content {
     flex-grow: 1;
     padding: 50px;
+    margin-left: 200px; /* Adjust for the fixed sidebar */
     background-color: #000; /* Black background for the main content */
     color: #fff; /* White text for the main content */
 }
@@ -90,7 +102,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url('Yellow-2.jpg'); /* Replace with your background image path */
+    background-image: url('path/to/your/image.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,7 +151,7 @@ body {
 .about-me {
     text-align: center;
     padding: 50px;
-    background-image: url('White-1.jpg'); /* Replace with your background image path */
+    background-image: url('path/to/your/about-me-background.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -166,7 +178,7 @@ body {
 .services {
     text-align: center;
     padding: 50px;
-    background-image: url('White-1.jpg'); /* Replace with your background image path */
+    background-image: url('path/to/your/services-background.jpg'); /* Replace with your background image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -248,12 +260,33 @@ footer .social-icon img:hover {
         width: 100%;
         height: auto;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 10px;
+        position: static; /* Make the sidebar static */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+    }
+
+    .menu-active .menu {
+        display: flex;
     }
 
     .main-content {
         padding: 20px;
+        margin-left: 0; /* Remove the left margin */
     }
 
     .hero {
