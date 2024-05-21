@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+<header>
         <div class="mobile-header">
             <div class="logo">
                 <img src="path/to/your/logo.png" alt="Logo">
@@ -19,10 +19,11 @@
             </button>
         </div>
     </header>
-    <div class="sidebar" id="sidebar">
-        <div class="logo">
-            <img src="path/to/your/logo.png" alt="Logo">
-        </div>
+    <nav id="nav">
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="path/to/your/logo.png" alt="Logo">
+            </div>
         <ul class="menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -94,6 +95,13 @@
             <p>&copy; 2024 Your Company. All Rights Reserved.</p>
         </footer>
     </div>
-    <script src="scripts.js"></script>
+    <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('sidebar');
+
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
