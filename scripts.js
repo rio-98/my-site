@@ -1,22 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll('.number');
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const sidebar = document.querySelector(".sidebar");
 
-    counters.forEach(counter => {
-        const updateCount = () => {
-            const target = +counter.getAttribute('data-count');
-            const count = +counter.innerText;
-            const speed = +counter.getAttribute('data-speed'); // Get the individual speed
-
-            const inc = target / speed;
-
-            if (count < target) {
-                counter.innerText = Math.ceil(count + inc);
-                setTimeout(updateCount, 1); // Control the delay for update
-            } else {
-                counter.innerText = target;
-            }
-        };
-
-        updateCount();
+    menuToggle.addEventListener("click", function() {
+        sidebar.classList.toggle("menu-active");
     });
 });
