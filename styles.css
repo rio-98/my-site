@@ -25,8 +25,8 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    position: absolute;
-    right: 20px;
+	position: relative; /* Change this from absolute to relative */
+    margin-right: 20px; /* Adjust the margin as needed */
 }
 
 .header .hamburger span {
@@ -41,12 +41,13 @@ body {
     padding: 0;
     display: flex;
     margin: 0;
-    flex-grow: 1;
     justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .header .menu-items li {
-    margin: 0 15px;
+    margin: 0 7px;
 }
 
 .header .menu-items li a {
@@ -67,7 +68,7 @@ body {
 }
 
 #hero {
-    padding: 100px 20px 50px 20px;
+    padding: 20px 20px 50px 20px;
     background: url('desktop-hero-background.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
@@ -185,7 +186,7 @@ footer .social-media a {
 }
 
 footer .social-media img {
-    width: 30px;
+    width: 40px;
 }
 
 /* Responsive Design */
@@ -210,6 +211,8 @@ footer .social-media img {
 @media (max-width: 768px) {
     .header .hamburger {
         display: flex;
+        position: absolute;
+        right: 20px;
     }
 
     .header .menu-items {
@@ -225,6 +228,10 @@ footer .social-media img {
 
     .header .menu-items.expanded {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     #hero {
@@ -255,11 +262,11 @@ footer .social-media img {
 
 @media (max-width: 480px) {
     .header .menu-items {
-        top: 50px;
+        top: 35px;
     }
 
     #hero {
-        padding: 80px 20px 20px 20px;
+        padding: 0px 20px 20px 20px;
         background: url('mobile-hero-background.jpg') no-repeat center center/cover;
     }
 
