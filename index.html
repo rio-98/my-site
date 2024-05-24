@@ -3,105 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Page</title>
+    <title>Responsive Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-        <div class="mobile-header">
-            <div class="logo">
-                <img src="path/to/your/logo.png" alt="Logo">
-            </div>
-            <button class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
         </div>
-    </header>
-    <nav id="nav">
-        <div class="sidebar" id="sidebar">
-            <div class="logo">
-                <img src="path/to/your/logo.png" alt="Logo">
-            </div>
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu-items" id="menu-items">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
-    </div>
-    <div class="main-content">
-        <div class="hero">
-            <h1>Crafty Digi World</h1>
-            <p>Lorem ipsum dolor sit amet consec tetur elit. Ut elit tellus, luctus nec ullam corper.</p>
-            <a href="#" class="discover-more">Discover More</a>
+    </header>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your journey to success starts here.</p>
+            <a href="#portfolio" class="btn">View My Work</a>
         </div>
-
-        <!-- New Section -->
-        <div class="new-section">
-            <div class="new-section-content">
-                <h1>Hello,</h1>
-                <h1>This is Dhivya & Ayaan.</h1>
-                <p>I'm a Marketing & Digital Marketing Freelancer. With a great passion about real and honest business conversations.</p>
-                <a href="#" class="cta-button">HOW I CAN HELP</a>
+    </section>
+    <section id="portfolio">
+        <div class="portfolio-content">
+            <div class="text-content">
+                <h1>My Portfolio</h1>
+                <p>Check out my projects and case studies.</p>
             </div>
-            <div class="new-section-image">
-                <img src="path/to/your/image.png" alt="Illustration">
+            <div class="portfolio-image-container">
+                <img src="portfolio-image.jpg" alt="Portfolio">
             </div>
         </div>
-
-        <!-- About Me Section -->
-        <div class="about-me">
-            <img src="path/to/your/image.png" alt="About Me Image">
-            <h2>About Me</h2>
-            <p>My name is Murad, and I am a freelance Marketing and Digital Marketing Consultant...</p>
+    </section>
+    <section id="about">
+        <div class="about-content">
+            <img src="about-image.jpg" alt="About Me">
+            <h1>About Me</h1>
+            <p>Learn more about my background and skills.</p>
         </div>
-
-        <!-- Services Section -->
-        <div class="services">
-            <h2>Services</h2>
+    </section>
+    <section id="services">
+        <div class="services-content">
+            <h1>Services</h1>
             <p>Go through the marketing services that I offer...</p>
         </div>
-
-        <!-- Guarantees Section -->
-        <div class="guarantees">
-            <h2>What I Guarantee</h2>
-            <div class="guarantees-content">
-                <div class="guarantee">
-                    <h3>Accurate Execution</h3>
-                    <p>Client tailored execution.</p>
-                </div>
-                <div class="guarantee">
-                    <h3>Commitment</h3>
-                    <p>Wholeheartedly committed to delivering transformational change for each client.</p>
-                </div>
-                <div class="guarantee">
-                    <h3>Value</h3>
-                    <p>Two words. Affordable investment.</p>
-                </div>
-            </div>
+    </section>
+    <footer>
+        <div class="social-media">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
         </div>
-        
-        <!-- Footer -->
-        <footer>
-            <div class="social-media">
-                <a href="#" class="social-icon"><img src="path/to/facebook-icon.png" alt="Facebook"></a>
-                <a href="#" class="social-icon"><img src="path/to/twitter-icon.png" alt="Twitter"></a>
-                <a href="#" class="social-icon"><img src="path/to/linkedin-icon.png" alt="LinkedIn"></a>
-                <a href="#" class="social-icon"><img src="path/to/instagram-icon.png" alt="Instagram"></a>
-            </div>
-            <p>&copy; 2024 Your Company. All Rights Reserved.</p>
-        </footer>
-    </div>
-    <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const sidebar = document.getElementById('sidebar');
-
-  menuToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-  });
-</script>
+        <p>&copy; 2023 My Portfolio. All Rights Reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
