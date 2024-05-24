@@ -1,287 +1,280 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    display: flex;
-    background-color: #000; /* Ensuring the body background is black */
-    color: #fff; /* Ensuring the default text color is white */
+    background-color: #000;
+    color: #fff;
 }
 
-.sidebar {
-    width: 200px;
-    background-color: #fff; /* White background for the sidebar */
-    color: #000; /* Black text for the sidebar */
+.header {
+    width: 100%;
+    background-color: #111;
+    padding: 10px 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    height: 100vh; /* Ensure the sidebar occupies the full height */
-	position: fixed;
-	top: 0;
-	left: -200px;
-	transition: left 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-.sidebar.active {
-	left: 0;
+.header .logo img {
+    width: 50px;
 }
 
-
-.sidebar .logo img {
-    max-width: 100%; /* Ensure the logo fits within the sidebar width */
-    height: auto;
-    margin-bottom: 30px;
+.header .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
 }
 
-.sidebar .menu {
+.header .hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.header .menu-items {
     list-style: none;
     padding: 0;
-    margin: 0; /* Ensure no default margins */
-    width: 100%; /* Ensure the menu takes the full width */
-}
-
-.sidebar .menu li {
-    margin-bottom: 20px;
-    width: 100%; /* Ensure each list item takes the full width */
-}
-
-.sidebar .menu li a {
-    color: #000; /* Black text for menu items */
-    text-decoration: none;
-    font-size: 18px;
-    display: block; /* Ensure the anchor takes the full width */
-    padding: 10px; /* Add some padding for better appearance */
-    text-align: center; /* Center align the text */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-}
-
-.sidebar .menu li a:hover {
-    background-color: #f0f0f0; /* Light gray background on hover */
-}
-
-.main-content {
+    display: flex;
+    margin: 0;
     flex-grow: 1;
-    padding: 50px;
-    background-color: #000; /* Black background for the main content */
-    color: #fff; /* White text for the main content */
+    justify-content: center;
 }
 
-.hero {
-    text-align: center;
-    margin-bottom: 50px;
-    background-color: #000; /* Black background for the hero section */
-    color: #fff; /* White text for the hero section */
-    padding: 50px;
-    border-radius: 5px;
+.header .menu-items li {
+    margin: 0 15px;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.hero .discover-more {
-    font-size: 16px;
-    color: #000; /* Black text for the button */
-    background-color: #fff; /* White background for the button */
-    padding: 10px 20px;
+.header .menu-items li a {
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    position: relative;
+    padding: 5px 0;
 }
 
-/* New Section */
-.new-section {
+.header .menu-items li a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background-color: orange;
+}
+
+#hero {
+    padding: 100px 20px 50px 20px;
+    background: url('desktop-hero-background.jpg') no-repeat center center/cover;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-image: url('Yellow-2.jpg'); /* Replace with your background image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 50px;
-    border-radius: 5px;
-    margin-top: 50px;
-    color: #fff; /* Default text color for new section */
+    justify-content: center;
+    text-align: center;
 }
 
-.new-section-content {
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    padding: 10px 20px;
+    background-color: orange;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#portfolio {
+    padding: 50px 20px;
+    background: url('Yellow3.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.text-content {
     max-width: 50%;
 }
 
-.new-section-content h1 {
-    font-size: 38px;
-    color: #000; /* Black text */
-    margin-bottom: 20px;
-}
-
-.new-section-content p {
-    font-size: 18px;
-    color: #000; /* Black text */
-    margin-bottom: 30px;
-}
-
-.new-section-btn {
-    background-color: #fff; /* White background */
-    color: #000; /* Black text */
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* About Me Section */
-.about-me {
-    text-align: center;
-    padding: 50px;
-    background-image: url('White-1.jpg'); /* Replace with your background image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #000; /* Default text color for about me section */
-    border-radius: 10px;
-}
-
-.about-me img {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.about-me h2 {
+.portfolio-content h1 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.about-me p {
+.portfolio-content p {
     font-size: 18px;
+    margin-bottom: 40px;
 }
 
-/* Services Section */
-.services {
-    text-align: center;
-    padding: 50px;
-    background-image: url('White-1.jpg'); /* Replace with your background image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #000; /* Default text color for services section */
-}
-
-.services h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.services p {
-    font-size: 18px;
-}
-
-/* Guarantees Section */
-.guarantees {
-    background-color: #000;
-    color: #fff;
-    padding: 50px;
-}
-
-.guarantees h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #f4c042; /* Yellow text */
-}
-
-.guarantees-content {
+.portfolio-image-container {
+    max-width: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
-.guarantee {
+.portfolio-image-container img {
+    width: 100%;
+    max-width: 500px;
+}
+
+#about {
+    padding: 50px 20px;
+    background: url('desktop-about-background.jpg') no-repeat center center/cover;
     text-align: center;
-    max-width: 300px;
 }
 
-.guarantee h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #f4c042; /* Yellow text */
-}
-
-.guarantee p {
-    font-size: 16px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000;
-    color: #fff;
-}
-
-/* Social Media Icons */
-footer .social-media {
+.about-content img {
+    width: 100%;
+    max-width: 500px;
     margin-bottom: 20px;
 }
 
-footer .social-icon img {
-    width: 40px;
-    height: 40px;
+.about-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+}
+
+#services {
+    padding: 50px 20px;
+    background: url('desktop-services-background.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+}
+
+.services-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services-content p {
+    font-size: 18px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+footer .social-media a {
     margin: 0 10px;
-    transition: transform 0.3s ease;
 }
 
-footer .social-icon img:hover {
-    transform: scale(1.1);
-}
-
-/* Mobile Header */
-.mobile-header {
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 20px;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
+footer .social-media img {
     width: 30px;
-    height: 21px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
 }
 
-.menu-toggle span {
-    width: 100%;
-    height: 3px;
-    background-color: #000;
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #hero {
+        background: url('tablet-hero-background.jpg') no-repeat center center/cover;
+    }
+
+    #portfolio {
+        background: url('tab-sec2.png') no-repeat center center/cover;
+    }
+
+    #about {
+        background: url('tablet-about-background.jpg') no-repeat center center/cover;
+    }
+
+    #services {
+        background: url('tablet-services-background.jpg') no-repeat center center/cover;
+    }
 }
 
 @media (max-width: 768px) {
-   .sidebar {
-        position: fixed;
-        height: 100%;
-        z-index: 100;
+    .header .hamburger {
+        display: flex;
     }
 
-    .main-content {
-        padding: 20px;
-    }
-
-    .new-section {
+    .header .menu-items {
+        display: none;
         flex-direction: column;
-        padding: 20px;
+        background-color: #111;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
     }
 
-    .new-section-content {
+    .header .menu-items.expanded {
+        display: flex;
+    }
+
+    #hero {
+        background: url('mobile-hero-background.jpg') no-repeat center center/cover;
+    }
+
+    #portfolio {
+        background: url('mob-sec2.png');
+    }
+
+    #about {
+        background: url('mobile-about-background.jpg') no-repeat center center/cover;
+    }
+
+    #services {
+        background: url('mobile-services-background.jpg') no-repeat center center/cover;
+    }
+
+    .portfolio-content, .about-content, .services-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content, .portfolio-image-container, .about-content img {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .menu-items {
+        top: 50px;
+    }
+
+    #hero {
+        padding: 80px 20px 20px 20px;
+        background: url('mobile-hero-background.jpg') no-repeat center center/cover;
+    }
+
+    #portfolio {
+        padding: 20px;
+        background: url('mob-sec2.png') no-repeat center center/cover;
+    }
+
+    #about {
+        padding: 20px;
+        background: url('mobile-about-background.jpg') no-repeat center center/cover;
+    }
+
+    #services {
+        padding: 20px;
+        background: url('mobile-services-background.jpg') no-repeat center center/cover;
     }
 }
