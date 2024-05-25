@@ -4,62 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Portfolio</title>
+    <meta name="description" content="Welcome to my professional portfolio. Explore my projects, learn about my services, and get in touch.">
+    <meta property="og:title" content="Responsive Portfolio">
+    <meta property="og:description" content="Welcome to my professional portfolio. Explore my projects, learn about my services, and get in touch.">
+    <meta property="og:image" content="path-to-image.jpg">
+    <meta property="og:url" content="http://www.yourwebsite.com">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
+    <header>
         <div class="logo">
-            <img src="Logo.png" alt="Logo">
+            <img src="Logo.png" alt="My Portfolio Logo">
         </div>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="menu-items" id="menu-items">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
+        <nav>
+            <ul class="menu-items" id="menu-items">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Your journey to success starts here.</p>
-            <a href="#portfolio" class="btn">View My Work</a>
-        </div>
-    </section>
-    <section id="portfolio">
-        <div class="portfolio-content">
-            <div class="text-content">
-                <h1>My Portfolio</h1>
-                <p>Check out my projects and case studies.</p>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Your journey to success starts here.</p>
+                <a href="#portfolio" class="btn">View My Work</a>
             </div>
-            <div class="portfolio-image-container">
-                <img src="illu-1.png" alt="Portfolio">
+        </section>
+        <section id="portfolio">
+            <div class="portfolio-content">
+                <div class="text-content">
+                    <h2>My Portfolio</h2>
+                    <p>Check out my projects and case studies.</p>
+                </div>
+                <div class="portfolio-image-container">
+                    <img src="illu-1.png" alt="My portfolio showcase">
+                </div>
             </div>
-        </div>
-    </section>
-    <section id="about">
-        <div class="about-content">
-            <img src="about-image.jpg" alt="About Me">
-            <h1>About Me</h1>
-            <p>Learn more about my background and skills.</p>
-        </div>
-    </section>
-    <section id="services">
-        <div class="services-content">
-            <h1>Services</h1>
-            <p>Go through the marketing services that I offer...</p>
-        </div>
-    </section>
+        </section>
+        <section id="about">
+            <div class="about-content">
+                <img src="about-image.jpg" alt="About Me">
+                <h2>About Me</h2>
+                <p>Learn more about my background and skills.</p>
+            </div>
+        </section>
+        <section id="services">
+            <div class="services-content">
+                <h2>Services</h2>
+                <p>Go through the marketing services that I offer...</p>
+            </div>
+        </section>
+        <section id="guarantee">
+            <div class="guarantee-content">
+                <h2>What I Guarantee</h2>
+                <div class="guarantee-columns">
+                    <div class="column">
+                        <h3>Accurate Execution</h3>
+                        <p>Client tailored execution.</p>
+                    </div>
+                    <div class="column">
+                        <h3>Commitment</h3>
+                        <p>Wholeheartedly committed to delivering transformational change for each client.</p>
+                    </div>
+                    <div class="column">
+                        <h3>Value</h3>
+                        <p>Two words. Affordable investment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="social-media">
             <a href="#"><img src="facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
             <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
-	    <a href="#"><img src="whatsapp.png" alt="Whatsapp"></a>
         </div>
         <p>&copy; 2023 My Portfolio. All Rights Reserved.</p>
     </footer>
