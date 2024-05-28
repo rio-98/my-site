@@ -161,7 +161,7 @@ header nav ul li a:hover {
 
 footer {
     padding: 50px;
-    background: url('desktop-footer-background.jpg') no-repeat center center/cover;
+    background: url('footer.png') no-repeat center center/cover;
     text-align: center;
 }
 
@@ -290,7 +290,7 @@ footer .social-media img {
     }
 
     footer {
-        background: url('mobile-footer-background.jpg') no-repeat center center/cover;
+        background: url('footer.png') no-repeat center center/cover;
         display: flex;
         flex-direction: column;
         align-items: center;
