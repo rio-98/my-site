@@ -384,6 +384,9 @@ button.btn:hover {
         margin-top: 20px;
     }
 
+    .portfolio-content .btn {
+		font-size: 16px;
+    }
     #about {
         background: url('mobile-about-background.jpg') no-repeat center center/cover;
         display: flex;
