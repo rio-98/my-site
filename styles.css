@@ -1,3 +1,5 @@
+/* Existing styles */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -121,7 +123,6 @@ header nav ul li a:hover {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-}
 
 #about {
     padding: 50px;
@@ -173,6 +174,107 @@ footer .social-media img {
     width: 30px;
 }
 
+/* Contact Page Styles */
+#contact {
+    padding: 50px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+
+.contact-page footer {
+    background-color: #fff; /* Change the footer background color to white */
+    color: #000; /* Change the footer text color to black */
+}
+
+.contact-page footer .social-media a img {
+    filter: invert(0); /* Ensure social media icons are visible on white background */
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    text-align: left;
+}
+
+input, select, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button.btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: #fdb414;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: black;
+    color: #fff;
+}
+
+/* Customize the country code appearance */
+.intl-tel-input .selected-flag .iti-flag {
+    background-color: transparent;
+}
+
+.intl-tel-input .selected-flag .iti-flag + div,
+.intl-tel-input .selected-flag .iti__selected-dial-code {
+    color: #000 !important;
+}
+
+.intl-tel-input .country-list {
+    background-color: #fff;
+    color: #000;
+}
+
+.intl-tel-input .country-list .country {
+    padding: 10px;
+    color: #000;
+}
+
+.intl-tel-input .country-list .country:hover,
+.intl-tel-input .country-list .country.highlight {
+    background-color: #eee;
+    color: #000;
+}
+
+.intl-tel-input input[type="tel"] {
+    color: #000;
+}
+
+/* Ensure visibility of selected country code */
+.intl-tel-input .selected-flag .iti__selected-dial-code {
+    color: #000 !important;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     header nav ul {
@@ -200,7 +302,7 @@ footer .social-media img {
     }
 
     #portfolio {
-        background: url('mob-sec.png') no-repeat center center/cover;
+        background: url('tablet-portfolio-background.jpg') no-repeat center center/cover;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -218,6 +320,22 @@ footer .social-media img {
     .portfolio-image-container img {
         max-width: 80%;
         margin-top: 20px;
+    }
+
+    #contact {
+        padding: 30px;
+    }
+
+    .contact-content {
+        padding: 20px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    .contact-page footer {
+        background-color: #fff; /* Ensure the footer background is white on tablet view */
     }
 }
 
@@ -245,7 +363,8 @@ footer .social-media img {
         font-size: 16px;
     }
 
-    #portfolio {mob-sec.pngmobile-portfolio-background.jpg') no-repeat center center/cover;
+    #portfolio {
+        background: url('mobile-portfolio-background.jpg') no-repeat center center/cover;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -281,12 +400,16 @@ footer .social-media img {
         text-align: center;
     }
 
-    #guarantee {
-        background: url('mobile-guarantee-background.jpg') no-repeat center center/cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    #contact {
+        padding: 20px;
+    }
+
+    .contact-content {
+        padding: 10px;
+    }
+
+    form {
+        gap: 5px;
     }
 
     footer {
@@ -295,6 +418,10 @@ footer .social-media img {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .contact-page footer {
+        background-color: #fff; /* Ensure the footer background is white on mobile view */
     }
 
     .guarantee-columns {
