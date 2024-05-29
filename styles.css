@@ -117,12 +117,7 @@ header nav ul li a:hover {
     height: auto;
 }
 
-.portfolio-content .btn {
-    padding: 10px 20px;
-    background-color: black;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+
 
 #about {
     padding: 50px;
@@ -364,7 +359,7 @@ button.btn:hover {
     }
 
     #portfolio {
-        background: url('mobile-portfolio-background.jpg') no-repeat center center/cover;
+        background: url('mob-sec.png') no-repeat center center/cover;
         flex-direction: column;
         align-items: center;
         text-align: center;
