@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <meta name="description" content="Get in touch with us. We would love to hear from you.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+</head>
+<body class="contact-page">
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="My Portfolio Logo">
+        </div>
+        <nav>
+            <ul class="menu-items" id="menu-items">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact">
+            <div class="contact-content">
+                <h1>Contact Us</h1>
+                <p>We would love to hear from you. Please fill out the form below to get in touch with us.</p>
+                <form action="submit_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" required pattern="\d*">
+                    
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company">
+                    
+                    <label for="service">Service Looking For in Brief:</label>
+                    <textarea id="service" name="service" rows="5" required></textarea>
+                    
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
+        </div>
+        <p>&copy; 2023 My Portfolio. All Rights Reserved.</p>
+    </footer>
+    <!-- Include intl-tel-input JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+        // Initialize intl-tel-input
+        const input = document.querySelector("#mobile");
+        const iti = window.intlTelInput(input, {
+            separateDialCode: true,
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                fetch('https://ipinfo.io?token=YOUR_TOKEN')
+                    .then(response => response.json())
+                    .then(data => {
+                        const countryCode = (data && data.country) ? data.country : "us";
+                        callback(countryCode);
+                    });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+
+        // Prevent non-numeric characters in the mobile input field
+        input.addEventListener('keypress', function(e) {
+            if (!/[\d\s\+\-\(\)]/.test(e.key)) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
